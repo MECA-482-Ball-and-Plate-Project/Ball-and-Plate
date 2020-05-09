@@ -8,7 +8,7 @@ Matlab and Simulink were used to designed a plate and motor system to keep a bal
 
 
 ![](BallandPlate.PNG) <br>
-Figure 1. Closed lopp response
+Figure 1. Closed lope response
 
 ![](BallandPlateModel.PNG)
 Figure 2. The direct model of our nonlinear equation of motion
