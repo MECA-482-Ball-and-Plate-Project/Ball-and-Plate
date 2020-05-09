@@ -5,9 +5,11 @@ Sessions: 20 <br>
 Matlab and Simulink were used to designed a plate and motor system to keep a ball cenetered on the plate.
 
 ## 2. Modeling
-![Image description](link-to-image)
 
-![GitHub Logo](/images/logo.png)
+
+![](BallandPlate.PNG) <br>
+
+![](BallandPlateModeling.PNG)
 
 ## 3. Controller Design and Simulations
 
