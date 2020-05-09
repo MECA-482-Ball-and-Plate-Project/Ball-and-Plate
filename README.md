@@ -25,16 +25,12 @@ coppelia.simxFinish(-1);
 clientID=coppelia.simxStart('127.0.0.1',19999,true,true,5000,5);
 if (clientID>-1)  
      disp('Connected to remote API server');
-     
      set_param('ball_and_beam', 'SimulationCommand', 'start') 
-    
      %joints
      h=[0,0];
         [r,h(1)]=coppelia.simxGetObjectHandle(clientID, 'RotateY0',coppelia.simx_opmode_blocking);
         [r,h(2)]=coppelia.simxGetObjectHandle(clientID, 'RotateX',coppelia.simx_opmode_blocking);
-       
-     while true
-     [res,retInts,retFloats,retStrings,retBuffer]=coppelia.simxCallScriptFunction(clientID,'Cam',coppelia.sim_scripttype_childscript,'CoordCalc',[],[],[],'',coppelia.simx_opmode_blocking);
+     while true   [res,retInts,retFloats,retStrings,retBuffer]=coppelia.simxCallScriptFunction(clientID,'Cam',coppelia.sim_scripttype_childscript,'CoordCalc',[],[],[],'',coppelia.simx_opmode_blocking);
      xcoord=retFloats(1);
      ycoord=retFloats(2);
      
