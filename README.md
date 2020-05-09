@@ -15,10 +15,11 @@ Figure 1. Closed lope response
 Figure 2. The direct model of our nonlinear equation of motion
 
 ## 3. Controller Design and Simulations
-The controller was designed with the use of Simulink and Matlab. Copelia was then used to create a simulation by communicating with Matlab and Simulink. Figure _ demostartes the code used to create the simulations.
+The controller was designed with the use of Simulink and Matlab. Copelia was then used to create a simulation by communicating with Matlab and Simulink. Figure 3 demostartes the code used to create the simulations.
 
-
-
+![](SImulationCodePart1.PNG)
+![](SImulationCodePart2.PNG)
+Figure 3. Matlab code to allow communication with Coppelia and SImulink
 
 
 (Insert link to video of simulation)
