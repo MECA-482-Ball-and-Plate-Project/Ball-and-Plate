@@ -24,20 +24,20 @@ Since Root Locus was used to design the controller the functiono rlocus(roots) w
 
 
 ![](BallandPlate.PNG) <br>
-Figure 1. Closed loop response
+Figure 2. Closed loop response
 
 
 ![](BallandPlateModel.PNG)
-Figure 2. The direct model of our nonlinear equation of motion
+Figure 3. Inside the Ball and Plate block shown in Figure 1
 
 
 ## 3. Controller Design and Simulations
 
-The controller was designed with the use of Simulink and Matlab. Copelia was then used to create a simulation by communicating with Matlab and Simulink. Figure 3 demostartes the code used to create the simulations.
+The controller was designed with  5% overshoot and 5% settling time with the use of Simulink and Matlab. Copelia was then used to create a simulation by communicating with Matlab and Simulink. Figure 4 demostartes the code used to create the simulations.
 
 ![](SImulationCodePart1.PNG)
 ![](SImulationCodePart2.PNG)
-Figure 3. Matlab code to allow communication with Coppelia and SImulink
+Figure 4. Matlab code to allow communication with Coppelia and SImulink
 
 
 (Insert link to video of simulation)
