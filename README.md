@@ -5,7 +5,7 @@ Sessions: 20 <br>
 Matlab and Simulink were used to designed a plate and motor system to keep a ball cenetered on the plate.
 
 ## 2. Modeling
-
+![](Image of Ball and Plate System.PNG) <br>
 The transfer function for one motor was found by using the 
 (Insert the equation of motion and the transfer function)
 
