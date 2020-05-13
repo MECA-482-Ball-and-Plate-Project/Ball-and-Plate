@@ -28,6 +28,7 @@ After these values were selected the gain was found by using the rlocfind functi
 (IF the roots and poles of the newly selected values did not fall within the design region implement the Lead Controller eq and find the new roots and poles, select one pole of the lead controller that will cancel one of the original poles these selected values will go in Lead compensator in simulink) Then put it in matlab and make sure the root locus fit in design criteria. Look at michigan page and copy code into Matlab to find the gain and that's it. <br>
 -----END OF NOTES-----
 <br>
+<br>
 ---- UPDATE SIMULINK WITH NEW #'S AND UPDATE THESE IMAGES----
 ![](BallandPlate.PNG) <br>
 Figure 2. Closed loop response
