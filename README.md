@@ -20,6 +20,10 @@ The design was done with the criteria of 5% overshoot and 5% settling time. (I J
 
 Since Root Locus was used to design the controller the function rlocus(TF) was used in Matlab to obtain Figure (Insert the graph given my matlab) which displays the roots and poles of the transfer function. As shown in the figure, the system contains two pools on the imaginary axis and do not fall within the design requirements of a damping ratio and natural frequency of 0.7 and 2.9 respectively. These values were found by using Eq() and Eq (). In order to solve this problem a lead controller was added to shift the the root locus to allow for the poles to fall within the criteria. The pole for the lead controller was selected to be 0.01 to cancel the pole at the origin and the pole was selected to be 8 through trial since it was the number which shiften the root locus the most as shown in Figure (). <br>
 
+![](PecerntOvershootEQ.PNG)      Eq () <br>
+                                          
+![](SettlingTimeEQ.PNG)          Eq() <br>
+
 (Insert the Figures mentioned above here) <br>
 
 After these values were selected the gain was found by using the rlocfind function in matlab. As shown in Figure () the gain found through Matlab was k = 80.1815 <br>
