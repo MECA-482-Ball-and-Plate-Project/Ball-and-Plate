@@ -1,7 +1,7 @@
 # Ball-and-Plate
 Group: Nicholas Chenevey, Janette Calvillo Solis, Joseph Mount, Jason Fry, Jonathan Okokwo <br>
 Sessions: 30 <br>
-Hours: 80 <br>
+Hours: 100 <br>
 ## 1. Introduction <br>
 A controller for a ball and plate system must be designed using Matlab, Simulink and Coppelia. The system is to keep a ball balanced at the center of the plate and must react according to the ball’s position to avoid the ball from falling off the plate.
 
