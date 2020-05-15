@@ -13,6 +13,10 @@ The Ball and Plate system being used is represented in Figure 1. The nonlinear e
 ![](ImageofSystem.PNG) <br>
 Figure 1. Image representing the Ball and Plate system <br>
 <br>
+
+![](equation1.PNG) <br>
+
+<br>
 The nonlinear equation of motion shown in Eq (4) was then linearized by = 0, thus, can be rewritten as  as shown in Eq (5). The transfer function, Eq (7), for one motor was then found by taking the Laplace Transform of the linearized equation, Eq (5)..This transfer function equation was used for the second motor as well. <br>
 <br>
 <br>
