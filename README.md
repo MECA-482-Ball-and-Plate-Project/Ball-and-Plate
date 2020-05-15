@@ -52,7 +52,7 @@ Figure 3. Poles are within design criteria after adding a Lead Controller <br>
 
 After these values were selected the gain was found by using the rlocfind function in matlab. As shown in Figure (4) the gain found through Matlab was k = 9.9642 <br>
 
-![](Figures/Figure4.PNG)
+![](Figures/Figure4.PNG) <br>
 Figure 4. Gain, k, given by the Matlab function rlocfind <br>
 
 
@@ -65,13 +65,13 @@ After using the mathematical model of the ball to test the effectiveness of the 
 
 ![](Figures/Figure5.png) <br>
 Figure 5. Simulink model 
-
+<br>
 
 ![](Figures/Figure6.PNG)
-Figure 6. Inside the Ball and Plate block shown in Figure 5
+Figure 6. Inside the Ball and Plate block shown in Figure 5 <br>
 
 ![](Figures/Figure7.PNG)
-Figure 7. Ball and Plate Simulink Loop
+Figure 7. Ball and Plate Simulink Loop <br>
 ## 3.3 Coppelia and Matlab
 Coppelia was then used with Matlab and Simulink to create a simulation using the Simulink models shown in Figure 4 and Figure 5. Figure 8 shows the code used by Coppelia to communicate the ball’s current coordinates to MATLAB while Figure 9 displays the code used in Matlab to communicate with Coppelia.
 
