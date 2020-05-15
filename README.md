@@ -33,13 +33,16 @@ Since Root Locus was used to design the controller, the function rlocus(TF) was 
 ![](SettlingTimeEQ.PNG)          Eq() <br>
 
 (Insert the Figures mentioned above here) <br>
+![](Figure2.PNG)
+Figure 2. Poles are in the imaginary axis and not within design criteria <br>
 
-Figure 2. Poles are in the imaginary axis and not within design criteria
+![](Figure3.PNG)
+Figure 3. Poles are within design criteria after adding a Lead Controller <br>
 
-Figure 3. Poles are within design criteria after adding a Lead Controller
+After these values were selected the gain was found by using the rlocfind function in matlab. As shown in Figure (4) the gain found through Matlab was k = 9.9642 <br>
 
-After these values were selected the gain was found by using the rlocfind function in matlab. As shown in Figure (4) the gain found through Matlab was k = 9.9642
-Figure 4. Gain, k, given by the Matlab function rlocfind
+![](Figure4.PNG)
+Figure 4. Gain, k, given by the Matlab function rlocfind <br>
 
 
 
@@ -49,17 +52,20 @@ Using Simulink, a mathematical model of the ball was developed for use in testin
 After using the mathematical model of the ball to test the effectiveness of the gain and lead compensator, the Ball and Plate Model block could be removed. The resulting block diagram is displayed in Figure 7. There are two separate resulting angles, one for the servo operating the X-axis and another for the servo operating the Y-axis. The first value is the desired coordinate, which then has the current coordinate of the ball subtracted from it. The resulting value is passed through the gain and lead compensator before being converted from degrees to radians. Finally, the resulting targeted angle is sent to the active MATLAB file. 
 
 ---- UPDATE SIMULINK WITH NEW #'S AND UPDATE THESE IMAGES----
-![](BallandPlate.PNG) <br>
+![](Figure5.PNG) <br>
 Figure 5. Simulink model 
 
 
-![](BallandPlateModel.PNG)
+![](Figure6.PNG)
 Figure 6. Inside the Ball and Plate block shown in Figure 5
 
+![](Figure7.PNG)
 Figure 7. Ball and Plate Simulink Loop
 ## 3.3 Coppelia and Matlab
 Coppelia was then used with Matlab and Simulink to create a simulation using the Simulink models shown in Figure 4 and Figure 5. Figure 8 shows the code used by Coppelia to communicate the ball’s current coordinates to MATLAB while Figure 9 displays the code used in Matlab to communicate with Coppelia.
 
+
+![](Figure8.PNG)
 Figure 8. Coppelia Perspective Vision Sensor Threaded Code
 
 The code within the while loop is used for testing purposes. The ball’s current coordinates are found using the vision sensor’s blob detection and then shown on a debug console. To use the coordinates within MATLAB, MATLAB calls the CoordCalc function and stores the returned values in new variables. 
