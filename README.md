@@ -55,8 +55,8 @@ Figure 4. Gain, k, given by the Matlab function rlocfind <br>
 Using Simulink, a mathematical model of the ball was developed for use in testing the lead compensator. Figure 5 shows the complete simulink block diagram, including the lead compensator and the ball and plate model. After using the lead compensator to produce a target angle, it is passed into the ball and plate model, shown in Figure 6,  for testing. The model simulates the ball’s position and outputs the expected position. Should the angle be correct, the position graph should stabilize at the originally targeted position. 
 After using the mathematical model of the ball to test the effectiveness of the gain and lead compensator, the Ball and Plate Model block could be removed. The resulting block diagram is displayed in Figure 7. There are two separate resulting angles, one for the servo operating the X-axis and another for the servo operating the Y-axis. The first value is the desired coordinate, which then has the current coordinate of the ball subtracted from it. The resulting value is passed through the gain and lead compensator before being converted from degrees to radians. Finally, the resulting targeted angle is sent to the active MATLAB file. 
 
----- UPDATE SIMULINK WITH NEW #'S AND UPDATE THESE IMAGES----
-![](Figures/Figure5.png) <br>
+
+![](Figures/Figure5.PNG) <br>
 Figure 5. Simulink model 
 
 
