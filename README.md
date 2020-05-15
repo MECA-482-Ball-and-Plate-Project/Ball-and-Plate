@@ -69,7 +69,7 @@ Figure 7. Ball and Plate Simulink Loop
 Coppelia was then used with Matlab and Simulink to create a simulation using the Simulink models shown in Figure 4 and Figure 5. Figure 8 shows the code used by Coppelia to communicate the ball’s current coordinates to MATLAB while Figure 9 displays the code used in Matlab to communicate with Coppelia.
 
 
-![](Figures/Figure8.PNG)
+![](Figures/Figure8.png)
 Figure 8. Coppelia Perspective Vision Sensor Threaded Code
 
 The code within the while loop is used for testing purposes. The ball’s current coordinates are found using the vision sensor’s blob detection and then shown on a debug console. To use the coordinates within MATLAB, MATLAB calls the CoordCalc function and stores the returned values in new variables. 
