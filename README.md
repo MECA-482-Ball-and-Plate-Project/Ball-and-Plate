@@ -20,10 +20,11 @@ The nonlinear equation of motion shown in Eq (4) was then linearized by = 0, thu
 
 <br>
 <br>
-The design was done with the criteria of 5% overshoot and 4% settling time. (I JUST THROUGH IN THESE #'s) With this knowledge, Eq () and Eq() were used to find the natural frequency and damping ratio.<br>
 
-Since Root Locus was used to design the controller the function rlocus(TF) was used in Matlab to obtain Figure (Insert the graph given my matlab) which displays the roots and poles of the transfer function. As shown in the figure, the system contains two pools on the imaginary axis and do not fall within the design requirements of a damping ratio and natural frequency of 0.7 and 1.45 respectively. These values were found by using Eq() and Eq (). In order to solve this problem a lead controller was added to shift the the root locus to allow for the poles to fall within the criteria. The pole for the lead controller was selected to be 0.01 to cancel the pole at the origin and the pole was selected to be 4 through trial since it was the number which shiften the root locus the most as shown in Figure (). <br>
+
 ## 3. Controller Design and Simulations
+
+## 3.1 Controller
 The design was done with the criteria of 5% overshoot and 4% settling time. With this knowledge, Eq (4) and Eq(5) were used to find the natural frequency,wn, and damping ratio,𝜁.
 Since Root Locus was used to design the controller, the function rlocus(TF) was used in Matlab to obtain Figure (2), which displays the roots and poles of the transfer function. As shown in the figure, the system contains two poles on the imaginary axis that do not fall within the design requirements of a damping ratio and natural frequency of 0.7 and 1.45 respectively. In order to solve this problem a lead controller was added to shift the root locus allowing the poles to fall within the criteria. The pole for the lead controller was selected to be 0.01 to cancel the pole at the origin  and the pole was selected to be 4 through trial since it was the smallest number which shifted the root locus as shown in Figure (3).
 
@@ -33,25 +34,39 @@ Since Root Locus was used to design the controller, the function rlocus(TF) was 
 
 (Insert the Figures mentioned above here) <br>
 
+Figure 2. Poles are in the imaginary axis and not within design criteria
 
-<br>
-<br>
+Figure 3. Poles are within design criteria after adding a Lead Controller
+
+After these values were selected the gain was found by using the rlocfind function in matlab. As shown in Figure (4) the gain found through Matlab was k = 9.9642
+Figure 4. Gain, k, given by the Matlab function rlocfind
+
+
+
+
+## 3.2 Simulink
+Using Simulink, a mathematical model of the ball was developed for use in testing the lead compensator. Figure 5 shows the complete simulink block diagram, including the lead compensator and the ball and plate model. After using the lead compensator to produce a target angle, it is passed into the ball and plate model, shown in Figure 6,  for testing. The model simulates the ball’s position and outputs the expected position. Should the angle be correct, the position graph should stabilize at the originally targeted position. 
+After using the mathematical model of the ball to test the effectiveness of the gain and lead compensator, the Ball and Plate Model block could be removed. The resulting block diagram is displayed in Figure 7. There are two separate resulting angles, one for the servo operating the X-axis and another for the servo operating the Y-axis. The first value is the desired coordinate, which then has the current coordinate of the ball subtracted from it. The resulting value is passed through the gain and lead compensator before being converted from degrees to radians. Finally, the resulting targeted angle is sent to the active MATLAB file. 
+
 ---- UPDATE SIMULINK WITH NEW #'S AND UPDATE THESE IMAGES----
 ![](BallandPlate.PNG) <br>
-Figure 2. Closed loop response
+Figure 5. Simulink model 
 
 
 ![](BallandPlateModel.PNG)
-Figure 3. Inside the Ball and Plate block shown in Figure 1
+Figure 6. Inside the Ball and Plate block shown in Figure 5
 
+Figure 7. Ball and Plate Simulink Loop
+## 3.3 Coppelia and Matlab
+Coppelia was then used with Matlab and Simulink to create a simulation using the Simulink models shown in Figure 4 and Figure 5. Figure 8 shows the code used by Coppelia to communicate the ball’s current coordinates to MATLAB while Figure 9 displays the code used in Matlab to communicate with Coppelia.
 
-## 3. Controller Design and Simulations
+Figure 8. Coppelia Perspective Vision Sensor Threaded Code
 
-The controller was designed with  5% overshoot and 5% settling time with the use of Simulink and Matlab. Copelia was then used to create a simulation by communicating with Matlab and Simulink. Figure 4 demostartes the code used to create the simulations.
+The code within the while loop is used for testing purposes. The ball’s current coordinates are found using the vision sensor’s blob detection and then shown on a debug console. To use the coordinates within MATLAB, MATLAB calls the CoordCalc function and stores the returned values in new variables. 
 
 ![](SImulationCodePart1.PNG)
 ![](SImulationCodePart2.PNG)
-Figure 4. Matlab code to allow communication with Coppelia and SImulink
+Figure 9. Code used in Matlab to help Coppelia communicate with Simulink
 
 
 (Insert link to video of simulation)
