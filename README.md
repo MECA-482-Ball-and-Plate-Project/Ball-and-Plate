@@ -5,9 +5,7 @@ Hours: 75 <br>
 ## 1. Introduction <br>
 A controller for a ball and plate system must be designed using Matlab, Simulink and Coppelia. The system is to keep a ball balanced at the center of the plate and must react according to the ball’s position to avoid the ball from falling off the plate.
 
-![equation](http://latex.codecogs.com/gif.latex?Concentration%3D%5Cfrac%7BTotalTemplate%7D%7BTotalVolume%7D) 
 
-![equation](http://latex.codecogs.com/gif.latex?\%OS=e^(\frac) 
 ## 2. Modeling 
 The Ball and Plate system being used is represented in Figure 1. The nonlinear equation of motion, Eq (1) was obtained using the diagram. Equations Eq (2) and Eq (3) were  also found through the geometry shown in the figure below.
 ![](ImageofSystem.PNG) <br>
@@ -16,11 +14,21 @@ Figure 1. Image representing the Ball and Plate system <br>
 
 ![](equation1.PNG) <br>
 
+![](equation2.PNG) <br>
+
+![](equation3.PNG) <br>
+
+![](equation4.PNG) <br>
+
 <br>
 The nonlinear equation of motion shown in Eq (4) was then linearized by = 0, thus, can be rewritten as  as shown in Eq (5). The transfer function, Eq (7), for one motor was then found by taking the Laplace Transform of the linearized equation, Eq (5)..This transfer function equation was used for the second motor as well. <br>
 <br>
 <br>
-(Insert the equation of motion and the transfer function)
+![](equation5.PNG) <br>
+
+![](equation6.PNG) <br>
+
+![](equation7.PNG) <br>
 
 <br>
 <br>
