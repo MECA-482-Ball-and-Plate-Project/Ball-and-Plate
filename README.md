@@ -12,23 +12,23 @@ The Ball and Plate system being used is represented in Figure 1. The nonlinear e
 Figure 1. Image representing the Ball and Plate system <br>
 <br>
 
-![](equation1.PNG) <br>
+![](Equations/equation1.PNG) <br>
 
-![](equation2.PNG) <br>
+![](Equations/equation2.PNG) <br>
 
-![](equation3.PNG) <br>
+![](Equations/equation3.PNG) <br>
 
-![](equation4.PNG) <br>
+![](Equations/equation4.PNG) <br>
 
 <br>
 The nonlinear equation of motion shown in Eq (4) was then linearized by sin(theta) = 0, thus, can be rewritten as  as shown in Eq (5). The transfer function, Eq (7), for one motor was then found by taking the Laplace Transform of the linearized equation, Eq (5).This transfer function equation was used for the second motor as well. <br>
 <br>
 
-![](equation5.PNG) <br>
+![](Equations/equation5.PNG) <br>
 
-![](equation6.PNG) <br>
+![](Equations/equation6.PNG) <br>
 
-![](equation7.PNG) <br>
+![](Equations/equation7.PNG) <br>
 
 <br>
 <br>
@@ -39,9 +39,9 @@ The nonlinear equation of motion shown in Eq (4) was then linearized by sin(thet
 ## 3.1 Controller
 The design was done with the criteria of 5% overshoot and 4% settling time. With this knowledge, Eq (4) and Eq(5) were used to find the natural frequency,wn, and damping ratio,𝜁. Since Root Locus was used to design the controller, the function rlocus(TF) was used in Matlab to obtain Figure (2), which displays the roots and poles of the transfer function. As shown in the figure, the system contains two poles on the imaginary axis that do not fall within the design requirements of a damping ratio and natural frequency of 0.7 and 1.45 respectively. In order to solve this problem a lead controller was added to shift the root locus allowing the poles to fall within the criteria. The pole for the lead controller was selected to be 0.01 to cancel the pole at the origin  and the pole was selected to be 4 through trial since it was the smallest number which shifted the root locus as shown in Figure (3).
 
-![](equation8.PNG) <br>
+![](Equations/equation8.PNG) <br>
 
-![](equation9.PNG) <br>
+![](Equations/equation9.PNG) <br>
 
 
 ![](Figures/Figure2.PNG)
