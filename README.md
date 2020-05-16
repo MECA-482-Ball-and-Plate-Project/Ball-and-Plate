@@ -87,7 +87,7 @@ The code within the while loop is used for testing purposes. The ball’s curren
 Figure 9. Code used in Matlab to help Coppelia communicate with Simulink
 
 
-(Insert link to video of simulation)
+(The simulation can be found under the Report and Presentation folder, inside the file named, Recorded_Presentation.mov)
 
 
 ## 4. Controller Implementation
