@@ -1,5 +1,5 @@
 # Ball-and-Plate
-Group: Nicholas Chenevey, Janette Calvillo Solis, Joseph Mount, Jason Fry, Jonathan Okokwo <br>
+Group: Nicholas Chenevey, Janette Calvillo Solis, Joseph Mount, Jason Fry, Jonathan Okonkwo <br>
 Sessions: 30 <br>
 Hours: 100 <br>
 (The full report can be found under the Report and Presentation folder)
